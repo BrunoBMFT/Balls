@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Red : Green
 {
     private Player player;
     private Rigidbody2D rb2d;
     private bool isSpecial = false;
+    private float timer;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -17,12 +19,17 @@ public class Red : Green
 
     void Update()
     {
+        timer += Time.deltaTime;
+        if (timer > 5)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        if (timer > 10)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void NewBall()
     {
         Vector3 position = new Vector3(Random.Range(-10, 10), 1, Random.Range(-10, 10));
-       GameObject obj = Instantiate(gameObject, position, Quaternion.identity);
+        GameObject obj = Instantiate(gameObject, position, Quaternion.identity);
 
         Red newRed = obj.GetComponent<Red>();
 
@@ -40,7 +47,6 @@ public class Red : Green
     {
         if (collision.tag == "Wall" && isSpecial)
         {
-            Debug.Log("aim");
             Vector2 dir = player.transform.position - transform.position;
             rb2d.velocity = dir * (speed/12) * Time.deltaTime;
         }
