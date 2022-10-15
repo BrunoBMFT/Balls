@@ -20,9 +20,9 @@ public class Red : Green
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 5)
+        if (timer > 30)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        if (timer > 10)
+        if (timer > 60)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
