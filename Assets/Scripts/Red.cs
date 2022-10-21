@@ -12,7 +12,7 @@ public class Red : Green
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        Vector2 dir = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         rb2d.velocity = dir * speed * Time.deltaTime;
         player = FindObjectOfType<Player>();
     }
@@ -28,9 +28,8 @@ public class Red : Green
 
     public void NewBall()
     {
-        Vector3 position = new Vector3(Random.Range(-10, 10), 1, Random.Range(-10, 10));
+        Vector3 position = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 1);
         GameObject obj = Instantiate(gameObject, position, Quaternion.identity);
-
         Red newRed = obj.GetComponent<Red>();
 
         float ballType = Random.Range(0, 2);
@@ -43,12 +42,12 @@ public class Red : Green
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.tag == "Wall" && isSpecial)
+        if (collision.gameObject.tag == "Wall" && isSpecial)
         {
             Vector2 dir = player.transform.position - transform.position;
-            rb2d.velocity = dir * (speed/12) * Time.deltaTime;
+            rb2d.velocity = dir * (speed / 12) * Time.deltaTime;
         }
     }
 }

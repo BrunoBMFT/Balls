@@ -14,7 +14,7 @@ public class Green : MonoBehaviour
     {
         rb2d = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
-        Vector2 dir = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         rb2d.velocity = dir * speed * Time.deltaTime;
     }
 
@@ -32,7 +32,7 @@ public class Green : MonoBehaviour
     private void NewPosition()
     {
         rb2d.position = new Vector2(Random.Range(-11, 11), Random.Range(-4, 4));
-        Vector2 dir = new Vector2(Random.Range(-1, 1), Random.Range(-1, 1));
+        Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         rb2d.velocity = dir * speed * Time.deltaTime;
     }
 
