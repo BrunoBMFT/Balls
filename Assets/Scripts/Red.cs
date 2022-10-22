@@ -28,7 +28,7 @@ public class Red : Green
 
     public void NewBall()
     {
-        Vector3 position = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 1);
+        Vector3 position = new Vector3(Random.Range(-10, 10), Random.Range(-3, 4), 1);
         GameObject obj = Instantiate(gameObject, position, Quaternion.identity);
         Red newRed = obj.GetComponent<Red>();
 
