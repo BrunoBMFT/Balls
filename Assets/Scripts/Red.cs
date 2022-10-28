@@ -17,14 +17,14 @@ public class Red : Green
         player = FindObjectOfType<Player>();
     }
 
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer > 30)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        if (timer > 60)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+  //  void Update()
+  //  {
+  //      timer += Time.deltaTime;
+  //      if (timer > 30)
+  //          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  //      if (timer > 60)
+  //          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  //  }
 
     public void NewBall()
     {
@@ -50,5 +50,7 @@ public class Red : Green
             rb2d.velocity = dir * (speed / 12) * Time.deltaTime;
         }
     }
+
+    
 }
 

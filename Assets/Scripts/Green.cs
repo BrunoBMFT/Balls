@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Green : MonoBehaviour
 {
-
     private Rigidbody2D rb2d;
     private BoxCollider2D boxCollider;
     public float speed;
