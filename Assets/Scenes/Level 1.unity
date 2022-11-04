@@ -267,6 +267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27f39768d408ca844b0a86eecbb34618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  red: {fileID: 1898881093}
+  speed: 200
 --- !u!1 &142780665
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,8 +507,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d758bdfbec9925a49b1e9e6d93ecd631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
   red: {fileID: 1898881093}
+  speed: 200
 --- !u!50 &721931377
 Rigidbody2D:
   serializedVersion: 4
@@ -1033,8 +1035,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941546de7bb181642b38f1e1f32d220d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
   red: {fileID: 0}
+  speed: 200
 --- !u!58 &1898881094
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -50,7 +50,6 @@ public class Red : Green
             rb2d.velocity = dir * (speed / 12) * Time.deltaTime;
         }
     }
-
     
 }
 

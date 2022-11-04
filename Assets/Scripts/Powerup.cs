@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Powerup : MonoBehaviour
 {
-    private Player player;
-    private Red red;
-    delegate void Power();
-    Power power;
-
+    public Red red;
+  //  delegate void Power();
+  //  Power power;
     private Rigidbody2D rb2d;
-    private float speed = 200;
+    public float speed;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -24,14 +23,14 @@ public class Powerup : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
-            power += PowerUp;
-            if (power != null)
-                power();
+            red.transform.localScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
+            //         power += PowerUp;
+            //         if (power != null)
+            //             power();
         }
     }
-    public void PowerUp()
-    {
-        Debug.Log("hi");
-        red.transform.localScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
-    }
+ //   public void PowerUp()
+ //   {
+ //       red.transform.localScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
+ //   }
 }

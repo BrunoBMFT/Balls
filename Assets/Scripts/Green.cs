@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Green : MonoBehaviour
 {
+    public Red red;
     private Rigidbody2D rb2d;
     private BoxCollider2D boxCollider;
     public float speed;
 
-    public Red red;
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
