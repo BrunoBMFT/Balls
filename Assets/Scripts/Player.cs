@@ -5,17 +5,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb2d;
-    private BoxCollider2D boxCollider;
     private float moveHorizontal;
     private float moveVertical;
     public float speed;
 
-
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-
     }
     void Update()
     {

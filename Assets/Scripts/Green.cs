@@ -6,19 +6,13 @@ public class Green : MonoBehaviour
 {
     public Red red;
     private Rigidbody2D rb2d;
-    private BoxCollider2D boxCollider;
     public float speed;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
         Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         rb2d.velocity = dir * speed * Time.deltaTime;
-    }
-
-    void Update()
-    {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -35,5 +29,4 @@ public class Green : MonoBehaviour
         Vector2 dir = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));
         rb2d.velocity = dir * speed * Time.deltaTime;
     }
-
 }
