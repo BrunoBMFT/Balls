@@ -24,6 +24,7 @@ public class Green : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            ScoreManager.instance.AddPoint();
             NewPosition();
             red.NewBall();
         }
