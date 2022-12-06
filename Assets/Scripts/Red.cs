@@ -17,14 +17,14 @@ public class Red : Green
         player = FindObjectOfType<Player>();
     }
 
-    void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer > 10)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        if (timer > 15)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+  //  void Update()
+  //  {
+  //      timer += Time.deltaTime;
+  //      if (timer > 10)
+  //          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  //      if (timer > 15)
+  //          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+  //  }
 
     public void NewBall()
     {
