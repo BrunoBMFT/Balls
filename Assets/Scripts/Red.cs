@@ -50,6 +50,22 @@ public class Red : Green
             rb2d.velocity = dir * (speed / 12) * Time.deltaTime;
         }
     }
-    
+
+    void OnEnable()
+    {
+        EventManager.power += PowerUp;
+    }
+    void OnDisable()
+    {
+        EventManager.power -= PowerUp;
+    }
+
+    void PowerUp()
+    {
+        Debug.Log("hi2");
+        Destroy(gameObject);
+        transform.localScale = new Vector2(transform.localScale.x / 2, transform.localScale.y / 2);
+    }
+
 }
 
